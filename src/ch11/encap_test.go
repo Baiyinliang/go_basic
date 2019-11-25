@@ -27,11 +27,13 @@ func TestCreateEmployeeObj(t *testing.T) {
 	t.Logf("e2 is %T", e2)
 }
 
+//使用此方法会有数据复制，会有更大的空间上复制的开销
 func (e Employee) String() string {
 	fmt.Printf("Address is %x", unsafe.Pointer(&e.Name))
 	return fmt.Sprintf("ID:%s-Name:%s-Age:%d", e.Id, e.Name, e.Age)
 }
 
+//使用此方法没有新的数据产生，所有的数据都是在同一个地址的
 //func (e *Employee) String() string {
 //	fmt.Printf("Address is %x",unsafe.Pointer(&e.Name))
 //	return fmt.Sprintf("ID:%s/Name:%s/Age:%d", e.Id, e.Name, e.Age)
