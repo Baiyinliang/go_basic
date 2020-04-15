@@ -1,6 +1,8 @@
 package type_test
 
-import "testing"
+import (
+	"testing"
+)
 
 type MyInt int64
 
@@ -37,7 +39,7 @@ func TestString(t *testing.T) {
 	t.Log("*" + s + "*")
 	t.Log(len(s))
 	//判断空字符串的方式
-	if s == ""{
+	if s == "" {
 
 	}
 }
