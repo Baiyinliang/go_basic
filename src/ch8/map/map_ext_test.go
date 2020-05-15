@@ -28,13 +28,19 @@ Go的内置集合没有Set实现，可以map[type]bool
 func TestMapForSet(t *testing.T) {
 	mySet := map[int]bool{}
 	mySet[1] = true
-	mySet[2] = true
-	n := 2
+	n := 3
 	if mySet[n] {
 		t.Logf("%d is existing", n)
 	} else {
 		t.Logf("%d is not existing", n)
 	}
-	delete(mySet, 1)  //删除指定map的键
+	mySet[3] = true
 	t.Log(len(mySet)) //获取map长度
+	delete(mySet, 1)  //删除指定map的键
+	n = 1
+	if mySet[n] {
+		t.Logf("%d is existing", n)
+	} else {
+		t.Logf("%d is not existing", n)
+	}
 }
