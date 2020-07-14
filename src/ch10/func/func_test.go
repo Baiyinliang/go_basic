@@ -70,5 +70,5 @@ defer函数
 func TestDefer(t *testing.T) {
 	defer Clear()
 	fmt.Println("Start")
-	panic("error")
+	panic("err")
 }
