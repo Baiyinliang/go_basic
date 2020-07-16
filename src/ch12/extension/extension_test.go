@@ -5,6 +5,8 @@ import (
 	"testing"
 )
 
+//扩展与复用
+
 type Pet struct {
 }
 
